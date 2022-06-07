@@ -1,9 +1,14 @@
 import { StyleSheet } from "react-native";
 import { textColors } from "../assets/colors";
+import { useFonts } from 'expo-font';
+
+const [loaded] = useFonts({
+    SF: require('../assets/Fonts/SF-Pro-Display-Bold.otf'),
+});
 
 const fontFamily = StyleSheet.create({
     bold:{
-        fontFamily: 'SF-Pro-Display-Bold',
+        fontFamily: loaded.SF,
     },
 })
 
